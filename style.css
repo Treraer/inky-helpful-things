@@ -1,0 +1,540 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,700|Quattrocento:700');
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Londrina Outline&display=swap');
+
+/*Self made CSS with the help from the internet*/
+
+/* Colorswitching text */
+
+/*styles like this can be added by copying the p section pasting it and then only changing the color values in the background-image section*/
+
+p.Color_Switching_Text_Rainbow{
+   text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #cb14d8 15%,
+    #551dd8 30%,
+    #291dd8 40%,
+    #1da9d8 50%,
+    #1dd84f 65%,
+    #dcff13 75%,
+    #d8b31d 90%,
+    #d81d1d 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: colorswitchingtext 2s linear infinite;
+  display: inline-block;
+      font-size: 14px;
+}
+
+/* animation for the colorswitching text */
+
+@keyframes colorswitchingtext {
+  to {
+    background-position: 200% center;
+  }
+}
+
+/*Neon signs of different kinds*/
+
+p.Neon_Sign_Yellow_Palm_Springs_Style{
+  font-size: 40px;
+  text-transform: uppercase;
+  color: yellow;
+  --interval: 10000ms;
+  display: block;
+  text-shadow:
+  0 0 20px,
+  0 0 40px,
+  0 0 80px;
+  will-change: filter, color;
+  filter: saturate(60%);
+  animation: flicker_neon_sign steps(100) var(--interval) 1s infinite;
+  font-family: Londrina Outline, Sacramaento;
+}
+
+p.Neon_Sign_Blue_California_Style{
+  font-size: 40px;
+  text-transform: uppercase;
+  color:#0567e8;
+  --interval: 1500ms;
+  display: block;
+  text-shadow:
+  0 0 20px,
+  0 0 40px,
+  0 0 80px;
+  will-change: filter, color;
+  filter: saturate(60%);
+  animation: flicker_neon_sign steps(100) var(--interval) 1s infinite;
+  font-family: Sriracha, Sacramaento;
+}
+
+p.Neon_Sign_Green_Big_Letters{
+  font-size: 60px;
+  
+  color: rgb(51, 255, 0);
+  --interval: 30ms;
+  display: block;
+  text-shadow:
+  0 0 20px,
+  0 0 40px,
+  0 0 80px;
+  will-change: filter, color;
+  filter: saturate(60%);
+  animation: flicker_neon_sign steps(100) var(--interval) 1s infinite;
+  font-family: Monoton, Fantasy;
+}
+
+/* Neon Sign Animator */
+
+@keyframes flicker_neon_sign {
+  50% {
+    color: white;
+    filter: saturate(200%) hue-rotate(20deg);
+  }
+}
+
+/* Message Bubble Right */
+
+p.Message_Right{
+    padding-right: 20px;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-left: auto;
+    background-color: #547e91;
+    color: white;
+    width: fit-content;
+    text-align: right;
+    word-wrap: break-word;
+    border-radius: 25px 25px 5px 25px;
+    
+}
+
+/* Message Bubble Left */
+
+p.Message_Left{
+    padding-left: 20px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-right: auto;
+    background-color: #eff1f4;
+    color: black;
+    width: fit-content;
+    text-align: left;
+    border-radius: 25px 25px 25px 5px;
+    word-wrap: break-word;
+}
+
+/* Blinking Animation for Notifications */
+
+@keyframes blink-2 {
+    0%,
+    50%,
+    100% {
+      opacity: 1;
+    }
+    25%,
+    75% {
+      opacity: 0.5;
+    }
+  }
+
+/* Blinking Animation for Notifications */
+
+@keyframes blink-1 {
+    0%,
+    50%,
+    100% {
+      opacity: 1;
+    }
+    25%,
+    75% {
+      opacity: 0.7;
+    }
+  }
+  
+/* Notification Green, blinking slowly */
+
+p.Notification_Green_Success{
+    animation: blink-1 4s infinite;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  border: 1px solid rgba(36, 241, 6, 0.46);
+    background-color: rgba(7, 149, 66, 0.12156862745098039);
+    box-shadow: 0px 0px 2px #259c08;
+    color: #0ad406;
+    border-radius: 25px 25px 25px 25px;
+  text-shadow: 2px 1px #00040a;
+  transition:0.5s;
+  cursor:pointer;
+}
+
+p.Notification_Green_Success:hover{
+    background-color: rgba(7, 149, 66, 0.35);
+    transition:0.5s;
+}
+
+/* Notification Blue */
+
+p.Notification_Blue_Info{
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  border: 1px solid rgba(6, 241, 226, 0.81);
+    background-color: rgba(1, 204, 220, 0.16);
+    box-shadow: 0px 0px 2px #03fff5;
+    color: #03d0ff;
+    text-shadow: 2px 1px #00040a;
+    border-radius: 25px 25px 25px 25px;
+  transition:0.5s;
+  cursor:pointer;
+}
+
+p.Notification_Blue_Info:hover{
+    background-color: rgba(1, 204, 220, 0.33);
+     transition:0.5s;
+}
+
+/* Notification Yellow, blinking quickly */
+
+p.Notification_Yellow_Warning{
+    animation: blink-2 2s infinite;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  border: 1px solid rgba(241, 142, 6, 0.81);
+    background-color: rgba(220, 128, 1, 0.16);
+    box-shadow: 0px 0px 2px #ffb103;
+    color: #ffb103;
+    text-shadow: 2px 1px #00040a;
+    border-radius: 25px 25px 25px 25px;
+  transition:0.5s;
+  cursor:pointer;
+}
+
+p.Notification_Yellow_Warning:hover{
+    background-color: rgba(220, 128, 1, 0.33);
+    transition:0.5s;
+  }
+
+/* Notification Red, blinking quickly */
+
+p.Notification_Red_Danger{
+    animation: blink-2 2s infinite;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  border: 1px solid rgba(241, 6, 6, 0.81);
+    background-color: rgba(220, 17, 1, 0.16);
+    box-shadow: 0px 0px 2px #ff0303;
+    color: #ff0303;
+    text-shadow: 2px 1px #00040a;
+    border-radius: 25px 25px 25px 25px;
+  transition:0.5s;
+  cursor:pointer;
+}
+
+p.Notification_Red_Danger:hover{
+     background-color: rgba(220, 17, 1, 0.33);
+  transition:0.5s;
+}
+
+/* Notification White */
+
+p.Notification_White_Tip{
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  border: 1px solid rgba(250, 250, 250, 0.916);
+    background-color: rgba(247, 247, 247, 0.504);
+    box-shadow: 0px 0px 2px #e5e5e5;
+    color: #ffffff;
+    text-shadow: 2px 1px #00040a;
+    border-radius: 25px 25px 25px 25px;
+  transition:0.5s;
+  cursor:pointer;
+}
+
+p.Notification_White_Tip:hover{
+     background-color: rgba(220, 220, 220, 0.33);
+  transition:0.5s;
+}
+
+/*Vanilla CSS*/
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: lighter;
+    background: white;
+    overflow: hidden;
+}
+
+body.switched {
+    transition: color 0.6s, background-color 0.6s;
+}
+
+h1,
+h2 {
+    text-align: center;
+    font-family: "Quattrocento", Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 30pt;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 14pt;
+    font-style: italic;
+    font-family: sans-serif;
+    font-weight: lighter;
+    color: #BBB;
+}
+
+.header {
+    padding-top: 3em;
+    padding-bottom: 3em;
+}
+
+/*
+  Built-in class:
+    # author: Name
+*/
+.byline {
+    font-style: italic;
+}
+
+.written-in-ink {
+    z-index: 3;
+    font-size: 9pt;
+    font-family: sans-serif;
+    text-align: center;
+    font-weight: 700;
+    position: fixed;
+    display: block;
+    width: 100%;
+    background: white;
+    transition: color 0.6s, background 0.6s;
+    margin: 0;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    height: 14px;
+    top: 0;
+}
+
+/* 
+  Enables <iframe> support work on itch.io when using mobile iOS
+*/
+.outerContainer {
+    position: absolute;
+    display: block;
+    margin: 0;
+    padding: 0;
+    -webkit-overflow-scrolling: touch;
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    margin-top: 24px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 980px) {
+    .outerContainer {
+        margin-top: 44px;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+
+.container {
+    display: block;
+    max-width: 40%; /*Html Container resizing propertyt either use percentage to auto resize when window size is changed or use fixed px like original 600px*/
+    margin: 0 auto;
+    padding: 20px;
+    padding-top: 4em;
+    background: white;
+}
+
+.switched .container {
+    transition: background-color 0.6s;
+}
+
+p {
+    font-size: 13pt;
+    color: #888;
+    line-height: 1.7em;
+    font-weight: lighter;
+}
+
+a {
+    font-weight: 700;
+    color: #b97c2c;
+    font-family: sans-serif;
+    transition: color 0.6s;
+    text-decoration: none;
+}
+
+a:hover {
+    color: black;
+    transition: color 0.1s;
+}
+
+strong {
+    color: black;
+    font-weight: bold;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    max-width: 50%; /*Image resizing property*/
+}
+
+.container .hide {
+    opacity: 0.0;
+}
+
+.container .invisible {
+    display: none;
+}
+
+.container>* {
+    opacity: 1.0;
+    transition: opacity 1.0s;
+}
+
+/*
+  Class applied to all choices
+  (Will always appear inside <p> element by default.)
+*/
+.choice {
+    text-align: center;
+    line-height: 1.7em;
+}
+
+/* 
+  Class applied to first choice
+*/
+:not(.choice)+.choice {
+    padding-top: 1em;
+}
+
+/*
+  Class applied to choice links
+*/
+.choice a {
+    font-size: 15pt;
+}
+
+/* 
+  Built-in class:
+    The End # CLASS: end
+*/
+.end {
+    text-align: center;
+    font-weight: bold;
+    color: black;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#controls {
+    z-index: 4;
+    font-size: 9pt;
+    text-align: center;
+    padding-bottom: 6px;
+    position: fixed;
+    right: 14px;
+    top: 4px;
+    user-select: none;
+    background: white;
+    transition: color 0.6s, background 0.6s;
+}
+
+#controls [disabled] {
+    color: #ccc;
+}
+
+#controls>*:not(:last-child):after {
+    content: " | ";
+}
+
+@media screen and (max-width: 980px) {
+    #controls {
+        z-index: 2;
+        padding-top: 24px;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+}
+
+/* 
+  Dark Theme (Added in Inky 0.10.0)
+    # theme: dark
+*/
+
+body.dark {
+    background: black;
+    color: white;
+}
+
+.dark h2 {
+    color: #666;
+}
+
+.dark .container {
+    background: black;
+}
+
+.dark .written-in-ink {
+    background: rgb(0, 0, 0);
+}
+
+.dark a {
+    color: #57afee;
+    transition: color 0.6s;
+}
+
+.dark a:hover {
+    color: white;
+}
+
+.dark strong {
+    color: white;
+}
+
+.dark #controls [disabled] {
+    color: #444;
+}
+
+.dark .end {
+    color: white;
+}
+
+.dark #controls {
+    background: black;
+}
