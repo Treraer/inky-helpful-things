@@ -14,3 +14,4 @@ Two Inky files with unicode emoji hardcoded as constants so they can easily be d
 ![image](https://github.com/Treraer/inky-helpful-things/assets/55573159/01c2b48e-79ef-485d-9da0-15005e866659)
 #Battle System
 * Now hold a battle system adventure style where you simply battle an enemy you predefine with abilites and items. You can find it under Logic_Battle_System with the .ink files and an html export for quick playthrough. It is pretty customizable and should allow you to change things thanks to plenty of explanation. (Probably not enough though.)
+  Special Mentions to smwhr, stephen/laz (ve/vim), IFcoltransG and joningold. They helped when I wanted to scream at walls!
