@@ -1,5 +1,9 @@
 === Battle_Processing ===
 
+{Enemy_Magic_Cooldown > 0: 
+    ~lower_1(Enemy_Magic_Cooldown)
+}
+
 {
         
     -Player_Health <= 0:
